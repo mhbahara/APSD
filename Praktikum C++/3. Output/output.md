@@ -51,14 +51,14 @@ Fungsi `putchar()` digunakan untuk menampilkan sebuah karakter ke layar tanpa pe
 Contoh penggunaan:
 
 ```cpp
+putchar('U');
+putchar('P');
 putchar('B');
-putchar('S');
-putchar('I');
 putchar('-');
 putchar('2');
 putchar('0');
-putchar('0');
-putchar('9');
+putchar('2');
+putchar('4');
 ```
 
 ### 4. cout
