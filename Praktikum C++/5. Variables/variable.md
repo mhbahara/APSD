@@ -1,4 +1,3 @@
-```mdx
 ## Variabel
 
 Variabel adalah suatu tempat menampung data atau konstanta di dalam memori yang memiliki nilai atau data yang dapat berubah-ubah selama proses program. Dalam pemberian nama variabel, terdapat ketentuan-ketentuan antara lain:
@@ -64,6 +63,5 @@ Perintah standar output yang disediakan oleh Borland C++, di antaranya adalah:
 - `puts()`
 - `putchar()`
 - `cout()`
-```
 
 Semoga format ini mempermudah pemahaman! Jika Anda memiliki pertanyaan lebih lanjut, jangan ragu untuk bertanya.
