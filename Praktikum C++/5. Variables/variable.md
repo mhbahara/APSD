@@ -63,6 +63,6 @@ Perintah standar output yang disediakan oleh Borland C++, di antaranya adalah:
 - `puts()`
 - `putchar()`
 - `cout()`
-
+```
 
 Semoga format ini mempermudah pemahaman! Jika Anda memiliki pertanyaan lebih lanjut, jangan ragu untuk bertanya.
