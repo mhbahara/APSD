@@ -1,6 +1,6 @@
 ## Perintah Keluaran
 
-Perintah standar output yang disediakan oleh Borland C++ antara lain:
+Perintah standar output yang disediakan oleh C++ antara lain:
 
 - `printf()`
 - `puts()`
