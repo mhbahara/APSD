@@ -5,7 +5,7 @@
 4. Masukkan nilai tugas pertamanya
 5. masukkan nilai tugas keduanya
 6. masukkan nilai tugas ketiganya
-7. program mengeksekusi rata-rata nilai siswa yang diambil dari nilai pertama ditambah nilai kedua ditambah nilai ketiga dibagi 3
+7. program mengeksekusi rata-rata nilai siswa yang diambil dari nilai pertama ditambah nilai kedua ditambah nilai ketiga dibagi 3, jika ada nilai tidak diisi dianggap nilainya 0.
 8. program menampilkan keluaran:
 "Nim ........ Siswa yang bernama ……
 Memperoleh nilai rata-rata ….. dari hasil tugas yang diikutinya."
