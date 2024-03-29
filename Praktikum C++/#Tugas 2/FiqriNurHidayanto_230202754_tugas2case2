@@ -1,0 +1,18 @@
+# Algoritma MEnghitung Nilai AKhir Mahasiswa
+1. Mulai memasukkan input
+2. Masukkan Nama Siswa
+3. Masukkan Nilai Murni Keaktifan
+4. Masukkan Nilai Murni Tugas
+5. Masukkan Nilai Murni Ujian
+6. Program Menghitung nilai akhir
+    a. NIlai Keaktifan Mewakili 20% nilai akhir
+    b. Nilai Tugas Mewakili 50% nilai akhir
+    c. Nilai Ujian Mewakili 30% nilai akhir
+7. Program Menampilkan keluaran :
+    Siswa yang bernama ……
+    Dengan Nilai Persentasi Yang dihasilkan.
+    Nilai Keaktifan * 20% : ……
+    Nilai Tugas * 50% : ……
+    Nilai Ujian * 30% : ……
+    Jadi Siswa yang bernama …… memperoleh nilai akhir sebesar …..
+8. Selesai
