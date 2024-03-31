@@ -2,7 +2,8 @@
 
 Setelah mempelajari modul Praktikum C++:
 1. Intro; 2. Syntax; 3. Output, 4. Comments;5. Variables;6. Input; 7 Data Types
-Kerjakan tugas berikut ini dengan menyusun Algoritma nya terlebih dahulu
+
+### Kerjakan tugas berikut ini dengan menyusun Algoritmanya terlebih dahulu
 1. Buat Notasi Algoritma Naratif Deskriptif.
 2. Buat Notasi Algoritma Dengan Flowcart.
 3. Buat Notasi Algoritma Pseudo Code.
