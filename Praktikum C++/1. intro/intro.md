@@ -31,3 +31,5 @@ int main() {
   return 0;
 }
 ```
+
+saya menambahkan latihan upload by terminal
