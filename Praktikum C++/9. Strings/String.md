@@ -359,7 +359,7 @@ Hasil Perubahan = HELLO
 #include <string.h>
 
 int main() {
-    char kalimat[] = "Akademi Manajemen Informatika dan Komputer Bina Sarana Informatika";
+    char kalimat[] = "Ilmu Komputer Universitas Putra Bangsa Kebumen";
     int panjang = strlen(kalimat);
     cout << "Panjang kata: " << panjang << endl;
     return 0;
@@ -373,7 +373,7 @@ int main() {
 #include <string.h>
 
 int main() {
-    char kalimat[] = "Akademi Manajemen Informatika dan Komputer Bina Sarana Informatika";
+    char kalimat[] = "Ilmu Komputer Universitas Putra Bangsa Kebumen";
     int panjang = strlen(kalimat);
     for (int i = panjang - 1; i >= 0; i--) {
         cout << kalimat[i];
