@@ -33,3 +33,4 @@ int main() {
 ```
 
 saya menambahkan latihan upload by terminal
+coba push lagi 
