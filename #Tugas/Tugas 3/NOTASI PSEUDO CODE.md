@@ -1,7 +1,8 @@
-#NOTASI ALGORITMA PSEUDO CODE
+# NOTASI ALGORITMA PSEUDO CODE
 
 ## CASE 1
-Menghitung Nilai Rata-rata Siswa
+**Menghitung Nilai Rata-rata Siswa**
+
 Buatlah program untuk menghitung nilai rata-rata dari seorang siswa, dengan ketentuan sebagai berikut:
 
 Nama Siswa, Nilai Pertandingan I, Nilai Pertandingan II, Nilai Pertandingan III diinput.
