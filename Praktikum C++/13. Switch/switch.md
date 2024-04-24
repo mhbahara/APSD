@@ -7,33 +7,31 @@ Setiap pilihan akan dijalankan jika syarat nilai konstanta tersebut dipenuhi, da
 **Contoh-1 switch**
 
 ```cpp
-#include<stdio.h>
-#include<conio.h>
-#include<iostream.h>
+#include <iostream>
 
-main()
-{
+using namespace std;
+
+int main() {
     int kode;
-    clrscr();
-    cout<<"Masukkan Kode Jurusan [11/12/13] : ";
-    cin>>kode;
-    switch(kode)
-    {
+    cout << "Masukkan Kode Jurusan [11/12/13] : ";
+    cin >> kode;
+    switch(kode) {
         case 11 :
-            cout<<"Komputerisasi Akuntansi";
+            cout << "Komputerisasi Akuntansi";
             break;
         case 12 :
-            cout<<"Manajemen Informatika";
+            cout << "Manajemen Informatika";
             break;
         case 13 :
-            cout<<"Tehnik Komputer";
+            cout << "Tehnik Komputer";
             break;
         default:
-            cout<<"Anda Salah Memasukan kode";
+            cout << "Anda Salah Memasukan kode";
             break;
     }
-    getch();
+    return 0;
 }
+
 ```
 
 Output yang akan dihasilkan dari program contoh tersebut akan tergantung pada input yang dimasukkan oleh pengguna.
@@ -45,36 +43,35 @@ Komputerisasi Akuntansi
 **Contoh-2 switch**
 
 ```cpp
-#include<stdio.h>
-#include<conio.h>
-#include<iostream.h>
+#include <iostream>
 
-main()
-{
+using namespace std;
+
+int main() {
     char kode;
-    clrscr();
-    cout<<"Masukkan Kode Barang [A..C] : ";
-    cin>>kode;
-    switch(kode)
-    {
+    cout << "Masukkan Kode Barang [A..C] : ";
+    cin >> kode;
+    switch(kode) {
         case 'A' :
         case 'a' :
-            cout<<"Alat Olah Raga";
+            cout << "Alat Olah Raga";
             break;
         case 'B' :
         case 'b' :
-            cout<<"Alat Elelktronik";
+            cout << "Alat Elektronik";
             break;
         case 'C' :
         case 'c' :
-            cout<<"Alat Masak";
+            cout << "Alat Masak";
             break;
         default:
-            cout<<"Anda Salah Memasukan kode";
+            cout << "Anda Salah Memasukan kode";
             break;
     }
-    getch();
+    return 0;
 }
+
+
 ```
 
 Output yang akan dihasilkan dari program contoh tersebut akan tergantung pada input yang dimasukkan oleh pengguna.
