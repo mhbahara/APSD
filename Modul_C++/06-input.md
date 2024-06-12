@@ -4,7 +4,7 @@ Perintah standar input yang disediakan oleh C++ meliputi:
 
 - `scanf()`
 - `gets()`
-- `cout()`
+- `cin()`
 - `getch`
 - `getche()`
 
