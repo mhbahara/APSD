@@ -3,12 +3,27 @@ seperti yang di jelaskan dalam variable , variable dalam C++ harus memiliki data
 contoh
 
 ```cpp
-int myNum = 5;               // Integer (whole number)
-float myFloatNum = 5.99;     // Floating point number
-double myDoubleNum = 9.98;   // Floating point number
-char myLetter = 'D';         // Character
-bool myBoolean = true;       // Boolean
-string myText = "Hello";     // String
+#include <iostream>
+#include <string>
+
+int main() {
+    int myNum = 5;               // Integer (whole number)
+    float myFloatNum = 5.99f;    // Floating point number
+    double myDoubleNum = 9.98;   // Floating point number
+    char myLetter = 'D';         // Character
+    bool myBoolean = true;       // Boolean
+    std::string myText = "Hello"; // String
+
+    std::cout << "Nilai myNum (integer): " << myNum << std::endl;
+    std::cout << "Nilai myFloatNum (float): " << myFloatNum << std::endl;
+    std::cout << "Nilai myDoubleNum (double): " << myDoubleNum << std::endl;
+    std::cout << "Nilai myLetter (char): " << myLetter << std::endl;
+    std::cout << "Nilai myBoolean (bool): " << myBoolean << std::endl;
+    std::cout << "Nilai myText (string): " << myText << std::endl;
+
+    return 0;
+}
+
 ```
 
 Basic Data Types

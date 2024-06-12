@@ -20,23 +20,23 @@ strcat(tujuan, sumber);
 **Contoh 01 Fungsi strcat**
 
 ```cpp
-#include <string.h>
-#include <ctype.h>
-#include <iostream.h>
+#include <iostream>
+#include <cstring>
 
-main()
-{
+using namespace std;
+
+int main() {
     char a1[20];
     char a2[20];
-    clrscr();
-    cout<<"Masukkan Kata - 1= ";
-    cin>>a1;
-    cout<<"Masukkan Kata - 2= ";
-    cin>>a2;
+    cout << "Masukkan Kata - 1 = ";
+    cin >> a1;
+    cout << "Masukkan Kata - 2 = ";
+    cin >> a2;
     strcat(a1, a2);
-    cout<<"Hasil Penggabungannya "<<a1;
-    getch();
+    cout << "Hasil Penggabungannya " << a1 << endl;
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-1 diatas adalah:**
@@ -58,32 +58,38 @@ strcmp(string1, string2);
 **Contoh 02 Fungsi strcmp**
 
 ```cpp
-#include <string.h>
-#include <iostream.h>
+#include <iostream>
+#include <cstring>
 
-main()
-{
+using namespace std;
+
+int main() {
     char a1[] = "UNIVERSITAS PUTRA BANGSA";
     char a2[] = "Universitas Putra Bangsa";
     char b1[] = "universitas putra bangsa";
-    clrscr();
-    cout<<"Hasil Perbandingan "<<a1<<" dan "<<a2<<"->";
-    cout<<strcmp(a1,a2)<<endl;
-    cout<<"Hasil Perbandingan "<<a2<<" dan "<<a2<<"->";
-    cout<<strcmp(a2,a1) <<endl;
-    cout<<"Hasil Perbandingan "<<a1<<" dan "<<b1<<"->";
-    cout<<strcmp(a1,b1) <<endl;
-    getch();
+    cout << "Hasil Perbandingan " << a1 << " dan " << a2 << " -> ";
+    cout << strcmp(a1, a2) << endl;
+    cout << "Hasil Perbandingan " << a2 << " dan " << a2 << " -> ";
+    cout << strcmp(a2, a1) << endl;
+    cout << "Hasil Perbandingan " << a1 << " dan " << b1 << " -> ";
+    cout << strcmp(a1, b1) << endl;
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-2 diatas:**
 ```plaintext
-Hasil Perbandingan UNIVERSITAS PUTRA BANGSA dan Universitas Putra Bangsa->32
-Hasil Perbandingan Universitas Putra Bangsa dan UNIVERSITAS PUTRA BANGSA->-32
-Hasil Perbandingan UNIVERSITAS PUTRA BANGSA dan universitas putra bangsa->-32
-
+Hasil Perbandingan UNIVERSITAS PUTRA BANGSA dan Universitas Putra Bangsa -> -1
+Hasil Perbandingan Universitas Putra Bangsa dan Universitas Putra Bangsa -> 1
+Hasil Perbandingan UNIVERSITAS PUTRA BANGSA dan universitas putra bangsa -> -1
 ```
+Keterangan 
+
+- Hasil perbandingan yang dicetak adalah nilai integer yang menunjukkan hubungan leksikografis antara kedua string karakter tersebut:
+  - Jika nilai yang dicetak adalah 0, berarti kedua string karakter tersebut sama.
+  - Jika nilai yang dicetak negatif, berarti string karakter pertama lebih kecil secara leksikografis daripada string karakter kedua.
+  - Jika nilai yang dicetak positif, berarti string karakter pertama lebih besar secara leksikografis daripada string karakter kedua.
 
 ### 1.3. Fungsi strcpy()
 
@@ -98,23 +104,22 @@ strcpy(string_tujuan, string_asal);
 **Contoh 03 Fungsi strcpy**
 
 ```cpp
-#include <stdio.h>
-#include <conio.h>
-#include <string.h>
-#include <iostream.h>
+#include <iostream>
+#include <cstring>
 
-main()
-{
+using namespace std;
+
+int main() {
     char huruf[20];
     char pindah[20];
-    clrscr();
-    cout<<"Masukkan Sembarang Kata = ";
-    gets(huruf);
+    cout << "Masukkan Sembarang Kata = ";
+    cin.getline(huruf, sizeof(huruf)); // Mendapatkan input string dengan batasan ukuran
     /* Proses */
     strcpy(pindah, huruf);
-    cout<<"Pemindahannya = "<<pindah;
-    getch();
+    cout << "Pemindahannya = " << pindah;
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-3 diatas:**
@@ -137,22 +142,19 @@ strlen(string);
 **Contoh 04 Fungsi strlen**
 
 ```cpp
-#include <stdio.h>
-#include <conio.h>
-#include <string.h>
-#include <iostream.h>
+#include <iostream>
+#include <cstring> // Untuk strlen()
 
-main()
-{
+using namespace std;
+
+int main() {
     char huruf[20];
-    char pindah[20];
-    clrscr();
-    cout<<"Masukkan Sembarang Kata = ";
-    gets(huruf);
-    cout<<"Panjang Kata Yang Diinputkan = ";
-    cout<<strlen(huruf);
-    getch();
+    cout << "Masukkan Sembarang Kata = ";
+    cin.getline(huruf, sizeof(huruf)); // Mendapatkan input string dengan batasan ukuran
+    cout << "Panjang Kata Yang Diinputkan = " << strlen(huruf);
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-4 diatas:**
@@ -174,20 +176,23 @@ strrev(string);
 **Contoh 05 Fungsi strrev**
 
 ```cpp
-#include <iostream.h>
-#include <conio.h>
-#include <string.h>
+#include <iostream>
+#include <cstring> // Untuk strrev()
+
+using namespace std;
 
 int main() {
     char kata[20];
-    clrscr();
     cout << "Masukkan Sembarang Kata = ";
-    gets(kata);
+    cin.getline(kata, sizeof(kata)); // Mendapatkan input string dengan batasan ukuran
     strrev(kata);
-    cout << "Hasil Perubahan = " << kata;
-    getch();
+    cout << "Hasil Perubahan = " << kata << endl;
+    
+    cout << "Tekan Enter untuk melanjutkan...";
+    cin.ignore(); // Menunggu sampai tombol Enter ditekan
     return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-5 diatas:**
@@ -207,22 +212,27 @@ Fungsi ini digunakan untuk mengubah string (teks) angka menjadi bilangan numerik
 **Contoh 06 Fungsi atof**
 
 ```cpp
-#include <stdio.h>
-#include <conio.h>
-#include <math.h>
-#include <iostream.h>
-main()
-{
+#include <iostream>
+#include <cstdlib> // Untuk atof()
+#include <cmath> // Untuk pow()
+
+using namespace std;
+
+int main() {
     char kata[20];
-    float angka, a, b;
-    clrscr();
-    cout<<"Masukan Sembarang Kata berupa angka = ";
-    gets(kata);
+    float angka, a;
+    
+    cout << "Masukkan Sembarang Kata berupa angka = ";
+    cin >> kata;
+
     angka = atof(kata);
     a = angka + 5;
-    cout<<"Hasil Perubahan ditambah dengan 5 = "<<a;
-    getch();
+
+    cout << "Hasil Perubahan ditambah dengan 5 = " << a << endl;
+
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-6 diatas:**
@@ -237,22 +247,27 @@ Fungsi ini digunakan untuk mengubah string (teks) angka menjadi bilangan numerik
 **Contoh 07 Fungsi atoi**
 
 ```cpp
-#include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
-#include <iostream.h>
-main()
-{
+#include <iostream>
+#include <cstdlib> // Untuk atoi()
+#include <cstring> // Untuk strlen()
+
+using namespace std;
+
+int main() {
     char kata[20];
-    float angka, a, b;
-    clrscr();
-    cout<<"Masukan Sembarang Kata berupa angka = ";
-    gets(kata);
-    angka = atoi(kata);
+    float angka, a;
+    
+    cout << "Masukkan Sembarang Kata berupa angka = ";
+    cin.getline(kata, 20);
+
+    angka = atof(kata);
     a = angka + 5;
-    cout<<"Hasil Perubahan ditambah dengan 5 = "<<a;
-    getch();
+
+    cout << "Hasil Perubahan ditambah dengan 5 = " << a << endl;
+
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-7 diatas:**
@@ -268,22 +283,25 @@ Fungsi ini digunakan untuk mengubah string (teks) angka menjadi bilangan numerik
 **Contoh 08 Fungsi atol**
 
 ```cpp
+#include <iostream>
+#include <cstdlib>
 #include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
-#include <iostream.h>
-main()
-{
+
+int main() {
     char kata[20];
-    float angka, a, b;
-    clrscr();
-    cout<<"Masukan Sembarang Kata berupa angka = ";
-    gets(kata);
-    angka = atol(kata);
+    float angka, a;
+    
+    std::cout << "Masukkan Sembarang Kata berupa angka = ";
+    fgets(kata, sizeof(kata), stdin);
+
+    angka = atof(kata);
     a = angka + 5;
-    cout<<"Hasil Perubahan ditambah dengan 5 = "<<a;
-    getch();
+
+    std::cout << "Hasil Perubahan ditambah dengan 5 = " << a;
+
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-8 diatas:**
@@ -299,20 +317,26 @@ Fungsi ini digunakan untuk mengubah setiap huruf kapital (huruf besar) dalam str
 **Contoh 09 Fungsi strlwr**
 
 ```cpp
+#include <iostream>
 #include <stdio.h>
-#include <conio.h>
 #include <string.h>
-#include <iostream.h>
-main()
-{
+#include <ctype.h>
+
+int main() {
     char kata[20];
-    clrscr();
-    cout<<"Masukan Sembarang Kata dengan Huruf Besar =";
-    gets(kata);
-    strlwr(kata);
-    cout<<"Hasil Perubahan = "<<kata;
-    getch();
+    
+    std::cout << "Masukkan Sembarang Kata dengan Huruf Besar = ";
+    fgets(kata, sizeof(kata), stdin);
+
+    for (int i = 0; kata[i] != '\0'; ++i) {
+        kata[i] = tolower(kata[i]);
+    }
+
+    std::cout << "Hasil Perubahan = " << kata;
+
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-9 diatas:**
@@ -328,20 +352,26 @@ Fungsi ini digunakan untuk mengubah setiap huruf kecil dalam string menjadi huru
 **Contoh 10 Fungsi strupr**
 
 ```cpp
+#include <iostream>
 #include <stdio.h>
-#include <conio.h>
 #include <string.h>
-#include <iostream.h>
-main()
-{
+#include <ctype.h>
+
+int main() {
     char kata[20];
-    clrscr();
-    cout<<"Masukan Sembarang Kata dengan Huruf Kecil=";
-    gets(kata);
-    strupr(kata);
-    cout<<"Hasil Perubahan = "<<kata;
-    getch();
+
+    std::cout << "Masukan Sembarang Kata dengan Huruf Kecil= ";
+    fgets(kata, sizeof(kata), stdin);
+
+    for (int i = 0; kata[i] != '\0'; ++i) {
+        kata[i] = toupper(kata[i]);
+    }
+
+    std::cout << "Hasil Perubahan = " << kata;
+
+    return 0;
 }
+
 ```
 
 **Output yang akan dihasilkan, dari program contoh-10 diatas:**
@@ -355,69 +385,78 @@ Hasil Perubahan = HELLO
 1. Program untuk menghitung panjang kata:
 
 ```cpp
-#include <iostream.h>
-#include <string.h>
+#include <iostream>
+#include <cstring>
 
 int main() {
     char kalimat[] = "Ilmu Komputer Universitas Putra Bangsa Kebumen";
-    int panjang = strlen(kalimat);
-    cout << "Panjang kata: " << panjang << endl;
+    int panjang = std::strlen(kalimat);
+    std::cout << "Panjang kata: " << panjang << std::endl;
     return 0;
 }
+
 ```
 
 2. Program untuk membalik kata:
 
 ```cpp
-#include <iostream.h>
-#include <string.h>
+#include <iostream>
+#include <cstring>
 
 int main() {
     char kalimat[] = "Ilmu Komputer Universitas Putra Bangsa Kebumen";
     int panjang = strlen(kalimat);
     for (int i = panjang - 1; i >= 0; i--) {
-        cout << kalimat[i];
+        std::cout << kalimat[i];
     }
-    cout << endl;
+    std::cout << std::endl;
     return 0;
 }
+
 ```
 
 3. Program untuk menggabungkan dua string:
 
 ```cpp
-#include <iostream.h>
-#include <string.h>
+#include <iostream>
+#include <string>
 
 int main() {
-    char kalimat1[] = "Manajemen";
-    char kalimat2[] = "Informatika";
-    strcat(kalimat1, kalimat2);
-    cout << "Hasil gabungan: " << kalimat1 << endl;
+    std::string kalimat1 = "Manajemen";
+    std::string kalimat2 = "Informatika";
+    std::string hasil = kalimat1 + kalimat2;
+    std::cout << "Hasil gabungan: " << hasil << std::endl;
     return 0;
 }
+
 ```
 
 4. Program untuk melakukan operasi aritmatika pada string:
 
 ```cpp
-#include <iostream.h>
-#include <string.h>
-#include <stdlib.h>
+#include <iostream>
+#include <cstdlib> // untuk atof()
 
 int main() {
     char kalimat1[] = "35.6";
     char kalimat2[] = "12.5";
 
+    // Konversi string ke floating point
     float angka1 = atof(kalimat1);
     float angka2 = atof(kalimat2);
 
-    cout << "a. Perkalian: " << angka1 * angka2 << endl;
-    cout << "b. Pembagian: " << angka1 / angka2 << endl;
-    cout << "c. Penambahan: " << angka1 + angka2 << endl;
-    cout << "d. Pengurangan: " << angka1 - angka2 << endl;
-    cout << "e. Sisa hasil pembagian: " << ((int)angka1 % (int)angka2) << endl;
+    // Operasi matematika
+    std::cout << "a. Perkalian: " << angka1 * angka2 << std::endl;
+    std::cout << "b. Pembagian: " << angka1 / angka2 << std::endl;
+    std::cout << "c. Penambahan: " << angka1 + angka2 << std::endl;
+    std::cout << "d. Pengurangan: " << angka1 - angka2 << std::endl;
+
+    // Mengonversi ke integer dan menghitung sisa hasil pembagian
+    int intAngka1 = static_cast<int>(angka1);
+    int intAngka2 = static_cast<int>(angka2);
+    std::cout << "e. Sisa hasil pembagian: " << (intAngka1 % intAngka2) << std::endl;
 
     return 0;
 }
+
 ```

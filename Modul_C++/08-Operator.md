@@ -212,20 +212,23 @@ y = x--; // nilai saat ini: y = 5, x = 4
 
 **03 Contoh Penggunaan Notasi Didepan Variabel**
 ```cpp
-#include<stdio.h>
-#include<conio.h>
-#include<iostream.h>
+#include <iostream>
 
-main() {
+using namespace std;
+
+int main() {
     int a = 10, b = 5;
-    printf("Nilai A = %d", a);
-    printf("\nNilai ++A = %d", ++a);
-    printf("\nNilai A = %d", a);
-    printf("\nNilai B = %d", b);
-    printf("\nNilai --B = %d", --b);
-    printf("\nNilai B = %d", b);
+
+    cout << "Nilai A = " << a;
+    cout << "\nNilai ++A = " << ++a;
+    cout << "\nNilai A = " << a;
+    cout << "\nNilai B = " << b;
+    cout << "\nNilai --B = " << --b;
+    cout << "\nNilai B = " << b;
+
     return 0;
 }
+
 
 ```
 
@@ -242,19 +245,21 @@ Nilai B = 4
 
 **04 Contoh Penggunaan Notasi Dibelakang Variabel:**
 ```c
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
 
-main() {
+int main() {
     int a = 10, b = 5;
+
     printf("Nilai A = %d", a);
-    printf("\nNilai ++A = %d", a++);
+    printf("\nNilai ++A = %d", ++a);
     printf("\nNilai A = %d", a);
     printf("\nNilai B = %d", b);
-    printf("\nNilai --B = %d", b--);
+    printf("\nNilai --B = %d", --b);
     printf("\nNilai B = %d", b);
+
     return 0;
 }
+
 ```
 
 Output yang akan dihasilkan dari program contoh-4 diatas adalah:
@@ -593,7 +598,7 @@ Nilai c = !(b) = 1
 
 ## Operator Bitwise
 
-Operator Bitwise digunakan untuk memanipulasi data dalam bentuk bit. Borland C++ menyediakan enam buah operator bitwise.
+Operator Bitwise digunakan untuk memanipulasi data dalam bentuk bit. C++ menyediakan enam buah operator bitwise.
 
 ### Tabel Operator Bitiwise
 
@@ -625,19 +630,33 @@ Di geser 1 bit ke kiri menjadi:
 **Contoh 10 Operator Bitwise << (Shift Left)**
 
 ```cpp
-#include<iostream.h>
-#include<stdio.h>
-#include<conio.h>
+#include <iostream>
+#include <conio.h>
 
-main() {
+using namespace std;
+
+int main() {
     int x;
     cout << "Masukan Nilai X = ";
     cin >> x;
+
     cout << "Nilai Awal : " << x << endl;
+
+    // Geser 1 bit ke kiri
     x = x << 1;
+
     cout << "Hasil dari Geser 1 Bit Kekiri = " << x << endl;
+
+    // Cetak nilai dalam representasi biner
+    cout << "Nilai dalam representasi biner: ";
+    for (int i = sizeof(int) * 8 - 1; i >= 0; --i) {
+        cout << ((x >> i) & 1);
+    }
+    cout << endl;
+
     return 0;
 }
+
 ```
 
 Output yang akan dihasilkan, dari program contoh diatas adalah:
@@ -667,19 +686,19 @@ Di geser 1 bit ke kanan menjadi:
 **Contoh 11 Operator Bitwise >> (Shift Right)**
 
 ```cpp
-#include<iostream.h>
-#include<stdio.h>
-#include<conio.h>
+#include <iostream>
+#include <conio.h>
 
-void main() {
+int main() {
     int x;
-    cout << "Masukan Nilai X = ";
-    cin >> x;
-    cout << ” Nilai Awal : “ << x << endl;
+    std::cout << "Masukan Nilai X = ";
+    std::cin >> x;
+    std::cout << "Nilai Awal : " << x << std::endl;
     x = x >> 1;
-    cout << "Hasil dari Geser 1 Bit Kekiri = " << x << endl;
+    std::cout << "Hasil dari Geser 1 Bit Kekiri = " << x << std::endl;
     return 0;
 }
+
 ```
 
 Output yang akan dihasilkan, dari program contoh-11 di atas adalah:
@@ -713,21 +732,26 @@ Contoh:
 **12 Operator Bitwise & (And)**
 
 ```cpp
-#include<iostream.h>
-#include<stdio.h>
-#include<conio.h>
+#include <iostream>
 
-void main() {
-    int a, x, y;
-    cout << "Masukan Nilai X = ";
-    cin >> x;
-    cout << "Masukan Nilai Y = ";
-    cin >> y;
-    a = x & y;
-    cout << '\n';
-    cout << "Hasil dari " << x << " & " << y << " = " << a << endl;
+int main() {
+    int x, y;
+    std::cout << "Masukan Nilai X = ";
+    std::cin >> x;
+    std::cout << "Masukan Nilai Y = ";
+    std::cin >> y;
+    int a = x & y;
+    std::cout << '\n';
+    std::cout << "Hasil dari " << x << " & " << y << " = " << a << std::endl;
+
+    // Menunggu hingga pengguna menekan tombol sebelum menutup konsol
+    std::cout << "Press any key to continue...";
+    std::cin.ignore(); // Mengabaikan karakter baru yang tersisa di buffer
+    std::cin.get(); // Menunggu hingga pengguna menekan tombol
+
     return 0;
 }
+
 ```
 
 Output yang akan dihasilkan, dari program contoh-12 di atas adalah:
@@ -762,21 +786,20 @@ Contoh :
 **13 Operator Bitwise | (Or)**
 
 ```cpp
-#include<iostream.h>
-#include<stdio.h>
-#include<conio.h>
+#include <iostream>
 
-void main() {
+int main() {
     int a, x, y;
-    cout << "Masukan Nilai X = ";
-    cin >> x;
-    cout << "Masukan Nilai Y = ";
-    cin >> y;
+    std::cout << "Masukan Nilai X = ";
+    std::cin >> x;
+    std::cout << "Masukan Nilai Y = ";
+    std::cin >> y;
     a = x | y;
-    cout << '\n';
-    cout << "Hasil dari " << x << " | " << y << " = " << a << endl;
+    std::cout << '\n';
+    std::cout << "Hasil dari " << x << " | " << y << " = " << a << std::endl;
     return 0;
 }
+
 ```
 
 Output yang akan dihasilkan, dari program contoh-13 di atas adalah:
@@ -808,21 +831,20 @@ Contoh :
 **14 Operator Bitwise ^ (eXclusive Or)**
 
 ```cpp
-#include<iostream.h>
-#include<stdio.h>
-#include<conio.h>
+#include <iostream>
 
-void main() {
+int main() {
     int a, x, y;
-    cout << "Masukan Nilai X = ";
-    cin >> x;
-    cout << "Masukan Nilai Y = ";
-    cin >> y;
+    std::cout << "Masukan Nilai X = ";
+    std::cin >> x;
+    std::cout << "Masukan Nilai Y = ";
+    std::cin >> y;
     a = x ^ y;
-    cout << '\n';
-    cout << "Hasil dari " << x << " ^ " << y << " = " << a << endl;
+    std::cout << '\n';
+    std::cout << "Hasil dari " << x << " ^ " << y << " = " << a << std::endl;
     return 0;
 }
+
 ```
 
 Output yang akan dihasilkan dari program contoh-14 di atas adalah:
@@ -851,19 +873,18 @@ Contoh :
 **15 Operator Bitwise ~ (Not)**
 
 ```cpp
-#include<iostream.h>
-#include<stdio.h>
-#include<conio.h>
+#include <iostream>
 
-void main() {
-    int a, x, y;
-    cout << "Masukan Nilai X = ";
-    cin >> x;
+int main() {
+    int a, x;
+    std::cout << "Masukan Nilai X = ";
+    std::cin >> x;
     a = ~x;
-    cout << '\n';
-    cout << "Hasil dari ~" << x << " = " << a << endl;
+    std::cout << '\n';
+    std::cout << "Hasil dari ~" << x << " = " << a << std::endl;
     return 0;
 }
+
 ```
 
 Output yang akan dihasilkan, dari program contoh-14 di atas adalah:
@@ -900,20 +921,21 @@ e. D = K + 10 > A && L – 2 > 4 * C
 
 ```c
 #include<stdio.h>
-#include<conio.h>
-main() {
+
+int main() {
     int a = 21;
-    printf("\n Nilai a = %d",a);
-    printf("\n Nilai a++ = %d",a++);
-    printf("\n Nilai ++a = %d",++a);
-    printf("\n Nilai --a = %d",--a);
-    printf("\n Nilai a = %d",a);
+    printf("\n Nilai a = %d", a);
+    printf("\n Nilai a++ = %d", a++);
+    printf("\n Nilai ++a = %d", ++a);
+    printf("\n Nilai --a = %d", --a);
+    printf("\n Nilai a = %d", a);
     a += 3;
-    printf("\n Nilai a = %d",a);
-    printf("\n Nilai ++a = %d",++a);
-    printf("\n Nilai a++ = %d",a++);
-    printf("\n Nilai --a = %d",--a);
-    printf("\n Nilai a-- = %d",a--);
+    printf("\n Nilai a = %d", a);
+    printf("\n Nilai ++a = %d", ++a);
+    printf("\n Nilai a++ = %d", a++);
+    printf("\n Nilai --a = %d", --a);
+    printf("\n Nilai a-- = %d", a--);
     return 0;
 }
+
 ```

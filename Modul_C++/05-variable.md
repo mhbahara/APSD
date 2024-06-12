@@ -25,7 +25,7 @@ Variabel numerik ini dibagi menjadi tiga macam:
 
 ### C. Deklarasi Variabel
 
-Deklarasi Variabel adalah proses memperkenalkan variabel kepada Borland C++ dan pendeklarasian tersebut bersifat mutlak karena jika tidak diperkenalkan terlebih dahulu maka Borland C++ tidak menerima variabel tersebut. Deklarasi Variabel ini meliputi tipe variabel, seperti integer atau character, dan nama variabel itu sendiri. Setiap kali pendeklarasian variabel harus diakhiri oleh tanda titik koma (;).
+Deklarasi Variabel adalah proses memperkenalkan variabel kepada C++ dan pendeklarasian tersebut bersifat mutlak karena jika tidak diperkenalkan terlebih dahulu maka C++ tidak menerima variabel tersebut. Deklarasi Variabel ini meliputi tipe variabel, seperti integer atau character, dan nama variabel itu sendiri. Setiap kali pendeklarasian variabel harus diakhiri oleh tanda titik koma (;).
 
 #### Tabel 2.3. Deklarasi Variabel
 
@@ -48,7 +48,7 @@ Tipe data nama variabel;
 
 Contoh Deklarasi:
 
-```
+```cpp
 char nama_mahasiswa[20];
 char grade;
 float rata_rata;
@@ -57,7 +57,7 @@ int nilai;
 
 ## 2.4. Perintah Keluaran
 
-Perintah standar output yang disediakan oleh Borland C++, di antaranya adalah:
+Perintah standar output yang disediakan oleh C++, di antaranya adalah:
 
 - `printf()`
 - `puts()`
