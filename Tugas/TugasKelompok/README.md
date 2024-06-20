@@ -32,5 +32,9 @@
      Anda diminta untuk membuat program untuk mengelola daftar kontak. Program ini harus dapat melakukan operasi seperti menambah, menghapus, mencari, mengedit kontak, dan menampilkan seluruh daftar kontak.
 
 
+8. [**Program Manajemen Reservasi Hotel**](/Tugas/TugasKelompok/8.ReservasiHotel.md)
 
+     Anda diminta untuk membuat program untuk mengelola reservasi hotel. Program ini harus dapat melakukan operasi seperti menambahkan reservasi baru, menghapus reservasi, mencari reservasi berdasarkan nama tamu atau ID reservasi, mengedit data reservasi, dan menampilkan daftar seluruh reservasi.
+
+     
  ### Selamat mengerjakan!
