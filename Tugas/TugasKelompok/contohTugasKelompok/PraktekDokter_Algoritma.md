@@ -1,6 +1,6 @@
 Berikut contoh algoritma/pseudocode untuk Program Manajemen Jadwal Dokter
 
-```cpp
+```javascript
 // Kelas Jadwal
 class Jadwal:
     // Atribut Jadwal
