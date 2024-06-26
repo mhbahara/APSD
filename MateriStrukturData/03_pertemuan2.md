@@ -244,7 +244,69 @@ int main() {
 
 
 ```
+ ### Latihan 2 Transverse:
+ ```cpp
+ #include <iostream>
+using namespace std;
 
+// Struktur node untuk pohon biner
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+    Node(int val) : data(val), left(nullptr), right(nullptr) {}
+};
+
+// Fungsi untuk preorder traversal
+void preorderTraversal(Node* node) {
+    if (node == nullptr) return;
+    cout << node->data << " "; // Kunjungi root
+    preorderTraversal(node->left); // Traverse subpohon kiri
+    preorderTraversal(node->right); // Traverse subpohon kanan
+}
+
+// Fungsi untuk inorder traversal
+void inorderTraversal(Node* node) {
+    if (node == nullptr) return;
+    inorderTraversal(node->left); // Traverse subpohon kiri
+    cout << node->data << " "; // Kunjungi root
+    inorderTraversal(node->right); // Traverse subpohon kanan
+}
+
+// Fungsi untuk postorder traversal
+void postorderTraversal(Node* node) {
+    if (node == nullptr) return;
+    postorderTraversal(node->left); // Traverse subpohon kiri
+    postorderTraversal(node->right); // Traverse subpohon kanan
+    cout << node->data << " "; // Kunjungi root
+}
+
+// Fungsi utama
+int main() {
+    // Membuat pohon biner sederhana
+    Node* root = new Node(1);
+    root->left = new Node(2);
+    root->right = new Node(3);
+    root->left->left = new Node(4);
+    root->left->right = new Node(5);
+    root->right->left = new Node(6);
+    root->right->right = new Node(7);
+
+    cout << "Preorder Traversal: ";
+    preorderTraversal(root);
+    cout << endl;
+
+    cout << "Inorder Traversal: ";
+    inorderTraversal(root);
+    cout << endl;
+
+    cout << "Postorder Traversal: ";
+    postorderTraversal(root);
+    cout << endl;
+
+    return 0;
+}
+```
 
 
 ## 9. Graph
